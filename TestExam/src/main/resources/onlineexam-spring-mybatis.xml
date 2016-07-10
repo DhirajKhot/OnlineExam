@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd ">
+
+	<bean id="onlineExamParentDAO" class="org.mybatis.spring.mapper.MapperFactoryBean"
+		abstract="true">
+		<property name="sqlSessionFactory" ref="onlineExamSessionFactory" />
+	</bean>
+
+	<bean id="onlineExamDAO" parent="onlineExamParentDAO">
+		<property name="mapperInterface" value="com.onlineexam.test.common.dao.OnlineExamDAO" />
+	</bean>
+
+	<bean id="questionDAO" parent="onlineExamParentDAO">
+		<property name="mapperInterface" value="com.onlineexam.test.question.dao.QuestionDAO" />
+	</bean>
+
+	<bean id="optionDAO" parent="onlineExamParentDAO">
+		<property name="mapperInterface" value="com.onlineexam.test.option.dao.OptionDAO" />
+	</bean>
+
+	<bean id="questionOptionAssociationDAO" parent="onlineExamParentDAO">
+		<property name="mapperInterface"
+			value="com.onlineexam.test.questionoptionassociation.dao.QuestionOptionAssociationDAO" />
+	</bean>
+
+</beans>
