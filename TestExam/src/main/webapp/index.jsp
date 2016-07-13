@@ -1,42 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Online Exam - Login</title>
-</head>
-<body>
-	<!-- div id='cssmenu'>
-		<ul>
-			<li class=""><a href=""><span>Home</span></a></li>
-			<li><a href=""><span>Login</span></a></li>
-			<li><a href=""><span>Register</span> </a></li>
-			<li class=""><a href=""><span>Submit a Question</span></a></li>
-			<li class=""><a href=""><span>Feedback</span></a></li>
-			<li><a href=""><span>Contribute</span></a></li>
-			<li><a href=""><span>Contact us</span></a></li>
-		</ul>
-	</div-->
-	<center>
-		<h2>Online Exam</h2>
-	</center>
-	<p style="padding-left: 30px;">Welcome user</p>
-	<p>&nbsp;</p>
-	<p style="padding-left: 30px;">Please read the below instructions
-		carefully before starting your test:</p>
-	<ul style="padding-left: 80px;">
-		<li>Do not press refresh button</li>
-		<li>Total score of the exam is 60.</li>
-		<li>There will be 60 questions each for 1 mark.</li>
-		<li>Time limit for the exam is 1 hour.</li>
-		<li>There will be a timer provided at the top right corner of the
-			page.&nbsp;</li>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Online Exam</title>
+        <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+	<div class="container">
+		<h1>Welcome to Online Exam</h1>
+		<form class="form">
+			<input type="text" placeholder="Username"/>
+			<input type="password" placeholder="Password"/>
+			<button type="submit" id="login-button"/>Login as Student</button>
+			<button type="submit" id="login-button"/>Login as Admin</button>
+		</form>
+	</div>
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
 	</ul>
-	<center>
-		<h3>
-			<a href="startExam?name=Rohit&questionNumber=1">Start</a>
-		</h3>
-	</center>
-</body>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="js/index.js"></script>
+  </body>
 </html>

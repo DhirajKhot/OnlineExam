@@ -5,6 +5,7 @@
  */
 package com.onlineexam.test.controller;
 
+import org.apache.click.ActionResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +31,10 @@ public class TestController {
 	private Integer MAX_QUESTION_NUMBER = 2;
 	private Integer MIN_QUESTION_NUMBER = 1;
 
+//	public ActionResult ShowHomePage() {
+//		
+//	}
+	
 	@RequestMapping("/startExam")
 	public ModelAndView startExam(@RequestParam(value = "name", required = false, defaultValue = "Test") String name,
 			@RequestParam(value = "Option", required = false) String optionChoosed,
