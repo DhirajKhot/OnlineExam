@@ -47,13 +47,13 @@
 				<td style="width: 150px; text-align: center;"><c:choose>
 						<c:when test="${questionNumber > minQuestionNumber}">
 							<input name="PreviousButton" type="button" value="Previous"
-								onclick="location.href='test?name=Rohit&questionNumber=${questionNumber - 1}'" />
+								onclick="location.href='startExam?name=${name}&questionNumber=${questionNumber - 1}'" />
 						</c:when>
 					</c:choose></td>
 				<td style="width: 150px; text-align: center;"><c:choose>
 						<c:when test="${questionNumber < maxQuestionNumber}">
 							<input name="NextButton" type="button" value="Next"
-								onclick="location.href='test?name=Rohit&questionNumber=${questionNumber + 1}'" />
+								onclick="location.href='startExam?name=${name}&questionNumber=${questionNumber + 1}'" />
 						</c:when>
 					</c:choose></td>
 			</tr>
