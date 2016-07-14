@@ -24,7 +24,7 @@
 	</ul>
 	<center>
 		<h3>
-			<a href="startExam?name=Rohit&questionNumber=1">Start</a>
+			<a href="startExam?name=${name}&questionNumber=1">Start</a>
 		</h3>
 	</center>
 </body>
