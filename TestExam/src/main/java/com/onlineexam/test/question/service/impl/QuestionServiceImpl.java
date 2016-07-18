@@ -40,25 +40,25 @@ public class QuestionServiceImpl extends OnlineExamAbstractService<Integer, Ques
 
 	@Override
 	public Question get(Integer questionId) {
-
 		Question question = super.get(questionId);
-
-		List<Option> options = getOptionsForQuestion(questionId);
-		question.setOptions(options);
-
+		setOptionsAndCorrectAnswer(question);
 		return question;
 	}
 
-	private List<Option> getOptionsForQuestion(Integer questionId) {
+	private void setOptionsAndCorrectAnswer(Question question) {
 
 		List<Option> options = new ArrayList<Option>();
+		List<Option> correctOptions = new ArrayList<Option>();
 		List<QuestionOptionAssociation> questionOptionAssociations = questionOptionAssociationService
-				.getByQuestionId(questionId);
+				.getByQuestionId(question.getId());
 
 		for (QuestionOptionAssociation association : questionOptionAssociations) {
 			options.add(association.getOption());
+			if (association.getIsCorrect()) {
+				correctOptions.add(association.getOption());
+			}
 		}
-
-		return options;
+		question.setOptions(options);
+		question.setCorrectAnswers(correctOptions);
 	}
 }

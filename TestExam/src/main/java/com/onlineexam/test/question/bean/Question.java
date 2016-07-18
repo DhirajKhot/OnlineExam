@@ -26,6 +26,7 @@ public class Question implements OnlineExamEntity<Integer>, OnlineExamSerializab
 	private String questionData;
 	private Integer marks;
 	private List<Option> options;
+	private List<Option> correctAnswers;
 
 	public Integer getId() {
 		return id;
@@ -52,6 +53,13 @@ public class Question implements OnlineExamEntity<Integer>, OnlineExamSerializab
 	public void setOptions(List<Option> options) {
 		this.options = options;
 	}
+	public List<Option> getCorrectAnswers() {
+		return correctAnswers;
+	}
+	public void setCorrectAnswers(List<Option> correctAnswers) {
+		this.correctAnswers = correctAnswers;
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		

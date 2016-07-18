@@ -17,8 +17,8 @@
 				<form:form method="post" class="form" modelAttribute="loginForm" action="postLogin">
 					<form:input path="userName" type="text" placeholder="Username"/>
 					<form:input path="password" type="password" placeholder="Password"/>
-					<button type="submit" id="login-button"/>Login as Student</button>
-					<button type="submit" id="login-button"/>Login as Admin</button>
+					<button type="submit" id="student-login-button">Login as Student</button>
+					<button type="submit" id="admin-login-button">Login as Admin</button>
 				</form:form>
 			</div>
 			<ul class="bg-bubbles">

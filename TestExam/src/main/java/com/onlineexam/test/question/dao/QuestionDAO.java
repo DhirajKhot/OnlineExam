@@ -5,6 +5,10 @@
  */
 package com.onlineexam.test.question.dao;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.onlineexam.test.common.dao.OnlineExamDAO;
 import com.onlineexam.test.question.bean.Question;
 
@@ -14,4 +18,5 @@ import com.onlineexam.test.question.bean.Question;
  */
 public interface QuestionDAO extends OnlineExamDAO<Question> {
 
+	public List<Question> getQuestionsByMarks(@Param("marks")Double marks);
 }

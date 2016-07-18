@@ -29,6 +29,22 @@
 		</if>
 	</select>
 	
+	<select id="getQuestionsByMarks" resultMap="question_mapper" parameterType="java.util.List">
+		
+		<![CDATA[
+			SELECT				
+		]]>
+		<include refid="default_resultset_columns" />
+		<![CDATA[
+			FROM
+		]]>
+		<include refid="table_name" /> <![CDATA[ AS question ]]>
+		<if test="marks != null ">
+		<![CDATA[
+			WHERE question.marks = #{marks}
+		]]>
+		</if>
+	</select>
 	
 	<sql id="default_resultset_columns">
 		<![CDATA[
