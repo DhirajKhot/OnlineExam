@@ -22,6 +22,7 @@ import com.onlineexam.test.exam.bean.Exam;
 import com.onlineexam.test.exam.service.ExamService;
 import com.onlineexam.test.question.bean.Question;
 import com.onlineexam.test.question.dao.QuestionDAO;
+import com.onlineexam.test.question.service.QuestionService;
 
 /**
  * @author Dhiraj Khot
@@ -45,6 +46,9 @@ public class ExamServiceImpl extends OnlineExamAbstractService<Integer, Exam> im
 	@Autowired
 	private QuestionDAO questionDAO;
 
+	@Autowired
+	private QuestionService questionService;
+	
 	private Map<Double, Integer> numberOfQuestionsMap = new HashMap<Double, Integer>();;
 
 	/*
@@ -101,7 +105,7 @@ public class ExamServiceImpl extends OnlineExamAbstractService<Integer, Exam> im
 
 			// Get random questions from the list obtained
 			while (numberOfQuestions > 0) {
-				Question question = questions.get(random.nextInt(questions.size()));
+				Question question = questionService.get(questions.get(random.nextInt(questions.size())).getId());
 				randomQuestions.add(question);
 				questions.remove(question);
 				numberOfQuestions = numberOfQuestions - 1;

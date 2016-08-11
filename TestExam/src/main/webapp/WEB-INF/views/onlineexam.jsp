@@ -35,7 +35,7 @@
 				<c:forEach var="option" items="${question.options}">
 					<tr>
 						<th style="text-align: right; vertical-align: middle;">&nbsp;
-							<form:input path="optionChoosed" type="radio" value=optionAlpha placeholder=null/>
+							<input type="radio" value="optionAlpha"/>
 						</th>
 						<td style="width: 5px; text-align: center;"><b><%=optionAlpha++%>.</b></td>
 						<td>&nbsp;${option.value}</td>
